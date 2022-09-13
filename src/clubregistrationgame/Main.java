@@ -12,6 +12,8 @@ public class Main {
         frame.setTitle("Interactive Registration Form (Made with Java AWT and Swing!)");
         frame.setResizable(true);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+        frame.add(gamePlay);
         frame.setVisible(true);
     }
 }
