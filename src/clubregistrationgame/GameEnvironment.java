@@ -23,6 +23,8 @@ public class GameEnvironment {
 
         switch(environmentName) {
             case "literally the only one":
+
+                // main lobby
                 int xOffset = 0;
                 int yOffset = 0;
                 addBlock(new RectBlock(0d, 0d, 630d, 360d, xOffset, yOffset)); // top left block
@@ -30,6 +32,7 @@ public class GameEnvironment {
                 addBlock(new RectBlock(810d, 0d, 1440d, 360d, xOffset, yOffset)); // top right block
                 addBlock(new RectBlock(810d, 540d, 1440d, 900d, xOffset, yOffset)); // bottom right block
 
+                // debug
                 xOffset = 1440;
                 yOffset = 0;
                 addBlock(new RectBlock(0d, 0d, 1440, 30, xOffset, yOffset)); // ceiling block
@@ -40,6 +43,7 @@ public class GameEnvironment {
                 addBlock(new RectBlock(0d, 0d, 30, 360, xOffset, yOffset)); // left top wall block
                 addBlock(new RectBlock(0d, 540d, 30, 360, xOffset, yOffset)); // left bottom wall block
 
+                // registration
                 xOffset = 0;
                 yOffset = -900;
                 addBlock(new RectBlock(0d, 0d, 1440, 30, xOffset, yOffset)); // ceiling block
@@ -49,6 +53,7 @@ public class GameEnvironment {
                 addBlock(new RectBlock(1440d - 30, 0d, 30, 900, xOffset, yOffset)); // right wall block
                 addBlock(new RectBlock(0d, 0d, 30, 900, xOffset, yOffset)); // left wall block
 
+                //playground
                 xOffset = -1440;
                 yOffset = 0;
                 addBlock(new RectBlock(0d, 0d, 1440, 30, xOffset, yOffset)); // ceiling block
@@ -57,6 +62,13 @@ public class GameEnvironment {
                 addBlock(new RectBlock(1440d-30, 540d, 30, 360, xOffset, yOffset)); // right bottom wall block
                 addBlock(new RectBlock(0d, 0d, 30, 900, xOffset, yOffset)); // left wall block
                 renderPlayground();
+
+                // literally nothing;
+                xOffset = 0;
+                yOffset = 900;
+                addBlock(new RectBlock(630d-60, 0d, 60, 40, xOffset, yOffset)); // left entrance block
+                addBlock(new RectBlock(810d, 0d, 60, 40, xOffset, yOffset)); // right entrance block
+
                 break;
         }
     }
@@ -86,9 +98,10 @@ public class GameEnvironment {
         g.drawString("REGISTRATION", 840 + xOffset + shiftedXAmount, 30 + yOffset + shiftedYAmount);
         g.drawString("DEBUGGING", 1290 + xOffset + shiftedXAmount, 340 + yOffset + shiftedYAmount);
         g.drawString("PLAYGROUND", 30 + xOffset + shiftedXAmount, 340 + yOffset + shiftedYAmount);
-        g.drawString("PLAYGROUND", 30 + xOffset + shiftedXAmount, 340 + yOffset + shiftedYAmount);
         g.drawString("LITERALLY", 840 + xOffset + shiftedXAmount, 830 + yOffset + shiftedYAmount);
         g.drawString("NOTHING", 840 + xOffset + shiftedXAmount, 870 + yOffset + shiftedYAmount);
+        g.setFont(new Font("default", Font.PLAIN, 14));
+        g.drawString("Club Meeting Times: Clubs Period, CCL and Lunch Times TBD", 840 + xOffset + shiftedXAmount, 350 + yOffset + shiftedYAmount);
 
         xOffset = 1440;
         yOffset = 0;
@@ -98,9 +111,9 @@ public class GameEnvironment {
 
         g.setFont(new Font("default", Font.PLAIN, 15));
         g.setColor(Color.BLACK);
-        g.drawString("Player X Pos: " + String.valueOf(player.exactX()),
+        g.drawString("Player X Pos: " + String.valueOf(player.intX()),
                 1040 + xOffset + shiftedXAmount, 300 + yOffset + shiftedYAmount);
-        g.drawString("Player Y Pos: " + String.valueOf(player.exactY()),
+        g.drawString("Player Y Pos: " + String.valueOf(player.intY()),
                 1240 + xOffset + shiftedXAmount, 300 + yOffset + shiftedYAmount);
         g.drawString("Player X Velocity: " + String.valueOf(player.xMoveVel),
                 1040 + xOffset + shiftedXAmount, 365 + yOffset + shiftedYAmount);

@@ -19,7 +19,7 @@ public class Player {
 
     protected boolean upMoveToggle, downMoveToggle, leftMoveToggle, rightMoveToggle = false;
 
-    protected double defaultMoveSpeed = 4.33;
+    protected double defaultMoveSpeed = 4;
     protected double xMoveVel = 0;
     protected double yMoveVel = 0;
 

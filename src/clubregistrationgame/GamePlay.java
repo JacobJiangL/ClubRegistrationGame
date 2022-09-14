@@ -1,9 +1,7 @@
 package clubregistrationgame;
 
-import org.w3c.dom.Text;
-
-import java.awt.*;
-
+import java.awt.Graphics;
+import java.awt.Graphics2D;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
@@ -17,6 +15,7 @@ import javax.swing.Timer;
 
 
 public class GamePlay extends JPanel implements ActionListener, KeyListener, MouseListener {
+
     int mouseX;
     int mouseY;
 
@@ -26,8 +25,8 @@ public class GamePlay extends JPanel implements ActionListener, KeyListener, Mou
     protected GameEnvironment gameEnvironment;
     protected Player player;
 
-    protected TextInputBox fNameInputBox = new TextInputBox(150, 150, 200, 30, 0, -900);
-    protected TextInputBox lNameInputBox = new TextInputBox(400, 150, 200, 30, 0, -900);
+    protected TextInputBox fNameInputBox = new TextInputBox(150, 150, 230, 30, 0, -900);
+    protected TextInputBox lNameInputBox = new TextInputBox(400, 150, 230, 30, 0, -900);
     protected TextInputBox emailFrontInputBox = new TextInputBox(700, 150, 300, 30, 0, -900);
 //    protected TextInputBox emailBackInputBox  = new TextInputBox(1050, 150, 200, 30, 0, -900);;
 
